@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/dates-manager/static/css/main.ba043687.css",
-    "main.js": "/dates-manager/static/js/main.a74ad047.js",
+    "main.js": "/dates-manager/static/js/main.3a8774b1.js",
     "static/media/img-not-found.png": "/dates-manager/static/media/img-not-found.df359d76789252a737e5.png",
     "static/media/heinz-ketchup.jpeg": "/dates-manager/static/media/heinz-ketchup.37c0a3485abf8aa4951c.jpeg",
     "static/media/intro-img.png": "/dates-manager/static/media/intro-img.6fba9c03b3d2d926afa4.png",
     "index.html": "/dates-manager/index.html",
     "main.ba043687.css.map": "/dates-manager/static/css/main.ba043687.css.map",
-    "main.a74ad047.js.map": "/dates-manager/static/js/main.a74ad047.js.map"
+    "main.3a8774b1.js.map": "/dates-manager/static/js/main.3a8774b1.js.map"
   },
   "entrypoints": [
     "static/css/main.ba043687.css",
-    "static/js/main.a74ad047.js"
+    "static/js/main.3a8774b1.js"
   ]
 }
