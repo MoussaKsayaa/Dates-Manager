@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/Dates-Manager/static/css/main.ba043687.css",
-    "main.js": "/Dates-Manager/static/js/main.31c81cca.js",
-    "static/media/img-not-found.png": "/Dates-Manager/static/media/img-not-found.df359d76789252a737e5.png",
-    "static/media/heinz-ketchup.jpeg": "/Dates-Manager/static/media/heinz-ketchup.37c0a3485abf8aa4951c.jpeg",
-    "static/media/intro-img.png": "/Dates-Manager/static/media/intro-img.6fba9c03b3d2d926afa4.png",
-    "index.html": "/Dates-Manager/index.html",
-    "main.ba043687.css.map": "/Dates-Manager/static/css/main.ba043687.css.map",
-    "main.31c81cca.js.map": "/Dates-Manager/static/js/main.31c81cca.js.map"
+    "main.css": "/dates-manager/static/css/main.ba043687.css",
+    "main.js": "/dates-manager/static/js/main.a74ad047.js",
+    "static/media/img-not-found.png": "/dates-manager/static/media/img-not-found.df359d76789252a737e5.png",
+    "static/media/heinz-ketchup.jpeg": "/dates-manager/static/media/heinz-ketchup.37c0a3485abf8aa4951c.jpeg",
+    "static/media/intro-img.png": "/dates-manager/static/media/intro-img.6fba9c03b3d2d926afa4.png",
+    "index.html": "/dates-manager/index.html",
+    "main.ba043687.css.map": "/dates-manager/static/css/main.ba043687.css.map",
+    "main.a74ad047.js.map": "/dates-manager/static/js/main.a74ad047.js.map"
   },
   "entrypoints": [
     "static/css/main.ba043687.css",
-    "static/js/main.31c81cca.js"
+    "static/js/main.a74ad047.js"
   ]
 }
