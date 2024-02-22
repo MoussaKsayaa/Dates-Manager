@@ -6,7 +6,7 @@ export default function Header() {
   const [content, setContent] = useState("");
   const pathname = window.location.pathname;
   useEffect(() => {
-    const pathwebname = '/Dates-Manager/'
+    const pathwebname = '/dates-manager/'
     const pathwebnameReg = new RegExp(pathwebname);
     if (pathname.match(pathwebnameReg)) {
       if (pathname === pathwebname) setContent("Home");
