@@ -1,0 +1,28 @@
+import { useState, useEffect } from "react";
+import { InputField } from "./tools/special-tools";
+import "../assets/css/account.css";
+import { Link } from 'react-router-dom';
+
+export default function SignIn() {
+  const [logInData, setLogInData] = useState({userName:'', email:'', password:''});
+  const [isDisabled, setIsDisabled] = useState(true)
+  useEffect(() => {
+    const isUserNameValid = logInData.userName.length >= 4;
+    const isEmailValid = logInData.email.match(/^[a-zA-Z0-9._%+-]+@gmail\.com$/g);
+    const isPasswordValid = logInData.password.match(/^[a-zA-Z][a-zA-Z0-9%$#@!*&^]{7,}$/g);
+    if (isUserNameValid && isEmailValid && isPasswordValid) setIsDisabled(false)
+    else setIsDisabled(true);
+  }, [logInData])
+  return (
+    <div className="account">
+      <form>
+        <h1 className="heading">Login</h1>
+        <InputField type="text" value={logInData.userName} onChange={e => setLogInData(prev => ({...prev, userName: e.target.value}))} required>User Name *</InputField>
+        <InputField type="email" value={logInData.email} onChange={e => setLogInData(prev => ({...prev, email: e.target.value}))} required>Email *</InputField>
+        <InputField type="password" value={logInData.password} onChange={e => setLogInData(prev => ({...prev, password: e.target.value}))} required>Password *</InputField>
+        <button type="submit" className="submit-btn" disabled={isDisabled}>Sign In</button>
+        <p className="another-option">Don't have an account? <Link to="/sign-up">Sign Up</Link></p>
+      </form>
+    </div>
+  )
+}

@@ -24,26 +24,22 @@ export const ImgInputField = ({onChange, children}) =>
     </label>
   </>
 
-export const InputField = ({value='', onChange, children, ...otherProps}) => 
+export const InputField = ({children, ...otherProps}) => 
   <>
     <label>{children} {' '}
       <input
-        value={value}
-        onChange={onChange}
         {...otherProps}
       />
     </label>
   </>
 
-export const DateInputField = React.forwardRef(({onBlur, onChange, required=false, children}, ref) =>
+export const DateInputField = React.forwardRef(({children, ...otherProps}, ref) =>
     <>
       <label>{children} {' '}
       <input
         type='date'
         ref={ref}
-        required={required}
-        onChange={onChange}
-        onBlur={onBlur}
+        {...otherProps}
       />
       </label>
     </>

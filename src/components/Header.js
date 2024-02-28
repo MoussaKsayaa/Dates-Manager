@@ -18,6 +18,19 @@ export default function Header() {
       if (pathname.match(/New-Item/)) setContent("NewItem");
     }
   }, [pathname])
+  useEffect(() => {
+    function clickListener(e) {
+      if ((isMobileMenuActive && !e.target.parentElement.classList.contains('mobile-menu') && !e.target.classList.contains('mobile-menu'))) setIsMobileMenuActive(false)
+    }
+    document.addEventListener('click', clickListener)
+    return () => document.removeEventListener('click', clickListener);
+  }, [isMobileMenuActive])
+  const handleNavClick = (e) => {
+    const name = e.target.attributes['section-name'].value;
+    setContent(name);
+    setIsMobileMenuActive(false);
+  }
+
   return (
     <div className='header'>
       <div className='container' >
@@ -30,9 +43,9 @@ export default function Header() {
         </div>
         </div>
         <nav className={`nav ${isMobileMenuActive ? 'active' : ''}`}>
-          <Link to="/" className={`nav-item ${content === "Home" ? "active" : ''}`} onClick={() => setContent("Home")}>Home</Link>
-          <Link to="/Dates" className={`nav-item ${content === "Dates" ? "active" : ''}`} onClick={() => setContent("Dates")}>Dates</Link>
-          <Link to="/New-Item" className={`nav-item ${content === "NewItem" ? "active" : ''}`} onClick={() => setContent("NewItem")}>New Dates</Link>
+          <Link to="/" section-name="Home" className={`nav-item ${content === "Home" ? "active" : ''}`} onClick={handleNavClick}>Home</Link>
+          <Link to="/Dates" section-name="Dates" className={`nav-item ${content === "Dates" ? "active" : ''}`} onClick={handleNavClick}>Dates</Link>
+          <Link to="/New-Item" section-name="NewItem" className={`nav-item ${content === "NewItem" ? "active" : ''}`} onClick={handleNavClick}>New Dates</Link>
         </nav>
       </div>
     </div>

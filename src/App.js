@@ -5,6 +5,8 @@ import Home from './components/Home';
 import Dates from './components/Dates';
 import Newdates from './components/New_dates';
 import Footer from './components/Footer';
+import SignIn from './components/LogIn';
+import SignUp from './components/SignUp';
 
 export default function App() {
 	return (
@@ -16,6 +18,8 @@ export default function App() {
           <Route path='/' element={<Home/>} />
           <Route path='/Dates' element={<Dates/>} />
           <Route path='/New-Item' element={<Newdates/>} />
+					<Route path='/login' element={<SignIn/>} />
+					<Route path='/sign-up' element={<SignUp/>} />
         </Routes>
 				</div>
 			</div>

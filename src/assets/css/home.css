@@ -62,15 +62,18 @@
   border: none;
   background-color: var(--main-color);
   color: white;
-  padding: 15px;
-  font-size: 22px;
+  padding: 17px;
+  font-size: 18px;
   font-weight: bold;
   border-radius: 12px;
   transition: background-color 0.3s;
   cursor: pointer;
+  display: block;
+  width: max-content;
 }
+
 .home .intro .heading .signin-btn:hover {
-  background-color: #f27a8a;
+  background-color: #f42c46;
 }
 
 .home .intro .intro-img {
